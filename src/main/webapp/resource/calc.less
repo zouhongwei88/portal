@@ -1,0 +1,98 @@
+@import "../global.less";
+@import "variables.less";
+
+@bannerBackgroundColor: rgba(233, 239, 241, 0.56);
+@btnFontColor: rgba(0, 0, 0, 0.7);
+@btnBackgroundColor: rgba(34, 61, 83, 0.69);
+@topHeight: 108px;
+
+@toolBtnActiveBackgroundColor: rgba(255, 190, 110, 0.6);
+@calcBorder: 1px solid rgba(222, 228, 230, 0.53);
+@toolBtnBackgroundColor: rgba(68, 136, 187, 0.8);
+
+html {
+	height: 100%;
+	body {
+		min-width: inherit;
+		height: 100%;
+		position: relative;
+		padding: 0;
+		background-color: @darkBackgroundColor;
+		margin: 0;
+		overflow: hidden;
+		color: @fontColor;
+	}
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+#container {
+	height: 100%;
+	width: 100%;
+	#calc {
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+	}
+}
+
+#top {
+	height: @topHeight;
+	background-color: rgba(45, 69, 94, 0.59);
+
+
+	padding-top: 40px;
+	#result {
+		height: @topHeight - 32px;
+		text-align: right;
+		padding-right: 8px;
+		color: #fff;
+		#express {
+			line-height: 24px;
+			font-size: 18px;
+			height: 24px;
+		}
+		#res {
+			font-size: 36px;
+			line-height: 42px;
+		}
+	}
+}
+
+#bottom {
+	height: ~"calc(100% - 106px)";
+	display: table;
+	width: 100%;
+	> .row {
+		height: 20%;
+		display: inline-table;
+		width: 100%;
+		> span {
+			display: table-cell;
+			width: 25%;
+			height: 100%;
+			vertical-align: middle;
+			text-align: center;
+			background-color: @btnBackgroundColor;
+			margin-right: 2px;
+
+			font-size: 1.4rem;
+			cursor: pointer;
+			color: @fontColor;
+			&.tool {
+				//background-color: @toolBtnBackgroundColor;
+				color: #fff;
+			}
+			&:active {
+				background-color: @toolBtnActiveBackgroundColor;
+			}
+		}
+		#equals.tool {
+			width: 50%;
+			background-color: @toolBtnActiveBackgroundColor;
+		}
+	}
+}

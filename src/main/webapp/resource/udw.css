@@ -1,0 +1,454 @@
+html body {
+	background-color: #154265;
+	background-image: radial-gradient(farthest-side ellipse at 10% 0, #154265 20%, #637da7);
+	background-image: -webkit-radial-gradient(10% 0, farthest-side ellipse, #154265 20%, #637da7);
+	background-image: -moz-radial-gradient(10% 0, farthest-side ellipse, #154265 20%, #637da7);
+	background-attachment: fixed, fixed;
+	color: rgba(255, 255, 255, 0.7);
+	font-weight: 400
+}
+
+html body .ui.button,
+html body .ui.button.positive {
+	background-color: rgba(51, 51, 51, 0.3);
+	color: rgba(255, 255, 255, 0.7)
+}
+
+html body .ui.button.primary {
+	background-color: rgba(51, 51, 51, 0.3) !important;
+	color: rgba(255, 255, 255, 0.7)
+}
+
+.h-box>.flex-box {
+	overflow: hidden
+}
+
+.main-wrapper {
+	background-color: transparent
+}
+
+.page-header {
+	background-color: rgba(0, 0, 0, 0.2);
+	padding: 8px 0 8px 20px
+}
+
+.page-header .ui.menu .app-name {
+	font-size: 20px;
+	color: rgba(255, 255, 255, 0.7)
+}
+
+.page-header .ui.menu #userStatusPopup.ui.popup {
+	background-color: rgba(51, 51, 51, 0.5);
+	border-color: rgba(51, 51, 51, 0.4)
+}
+
+.page-header .ui.menu #userStatusPopup.ui.popup:before {
+	background: transparent
+}
+
+.page-header .ui.menu #userStatusPopup.ui.popup message.ui.message {
+	color: rgba(255, 255, 255, 0.7);
+	text-align: center;
+	background-color: rgba(51, 51, 51, 0.4)
+}
+
+.page-header .ui.menu #userStatusPopup.ui.popup .ui.button {
+	color: #fff;
+	background-color: #00b19d !important
+}
+
+.page-header .ui.menu .item {
+	color: rgba(255, 255, 255, 0.7);
+	padding: 0 8px
+}
+
+.page-header .ui.menu .item .ui.basic.button {
+	color: rgba(255, 255, 255, 0.7) !important;
+	-webkit-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.2) inset !important;
+	-moz-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.2) inset !important;
+	box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.2) inset !important
+}
+
+.page-header .ui.menu .item i {
+	font-size: 16px;
+	margin: 0 4px !important
+}
+
+.page-header .ui.menu .user.item {
+	color: rgba(255, 255, 255, 0.7)
+}
+
+.page-header .ui.menu .user.item:hover {
+	background-color: transparent;
+	color: #fff !important
+}
+
+.page-header .ui.menu .user.item:hover img {
+	border: 1px solid #fff
+}
+
+.page-header .ui.menu .user.item span {
+	margin: 0 6px
+}
+
+.page-banner {
+	background-color: transparent;
+	padding: 4px 20px
+}
+
+.page-banner .toolbar {
+	background-color: transparent
+}
+
+.page-banner .toolbar a {
+	color: rgba(255, 255, 255, 0.7)
+}
+
+.page-banner .toolbar .right.box {
+	margin-right: -4px
+}
+
+.page-banner .toolbar .ui.input {
+	color: rgba(255, 255, 255, 0.7)
+}
+
+.page-banner .toolbar .ui.input input {
+	line-height: 18px;
+	padding: 5px 12px !important;
+	background-color: rgba(51, 51, 51, 0.4) !important;
+	color: #f8f8f8
+}
+
+.page-banner .toolbar .ui.input ::-webkit-input-placeholder {
+	color: rgba(255, 255, 255, 0.7)
+}
+
+.page-banner .toolbar .ui.input ::-moz-placeholder {
+	color: rgba(255, 255, 255, 0.7)
+}
+
+.page-banner .toolbar .ui.input :-ms-input-placeholder {
+	color: rgba(255, 255, 255, 0.7)
+}
+
+.page-banner .toolbar .ui.input :-moz-placeholder {
+	color: rgba(255, 255, 255, 0.7)
+}
+
+.page-banner .toolbar .ui.input i.icon {
+	width: 28px
+}
+
+.page-footer {
+	padding: 0 20px;
+	background-color: rgba(0, 0, 0, 0.2)
+}
+
+.page-footer .toolbar {
+	background-color: transparent
+}
+
+.page-footer .item {
+	width: 52px;
+	cursor: pointer;
+	color: #fff;
+	padding: 4px;
+	margin-left: 10px;
+	display: inline-block;
+	text-align: center
+}
+
+.page-footer .item i {
+	font-size: 24px;
+	line-height: 28px;
+	margin: 0
+}
+
+.page-footer .item:hover {
+	background-color: rgba(255, 255, 255, 0.16)
+}
+
+.task-container {
+	padding: 0 8px 16px 16px
+}
+
+.calendar-container {
+	padding: 0 16px 16px 6px
+}
+
+.task-container>.v-box {
+	border: 1px solid rgba(0, 0, 0, 0);
+	background-color: rgba(51, 51, 51, 0.4)
+}
+
+.task-container .ui.toolbar,
+.task-container .ui.menu {
+	margin: 6px 20px;
+	background-color: transparent;
+	font-size: 12px
+}
+
+.task-container .ui.toolbar .ui.button,
+.task-container .ui.menu .ui.button {
+	font-size: 12px
+}
+
+.task-container .ui.toolbar .refresh.button,
+.task-container .ui.menu .refresh.button {
+	border-radius: 0
+}
+
+.task-container .ui.toolbar>.header,
+.task-container .ui.menu>.header {
+	font-size: 14px;
+	margin-right: 16px
+}
+
+.task-container .ui.toolbar>.header span,
+.task-container .ui.menu>.header span {
+	line-height: 24px
+}
+
+.task-container .ui.menu.pager.secondary .item {
+	color: rgba(255, 255, 255, 0.7)
+}
+
+#menuSidebar,
+#toolsSidebar.ui.sidebar {
+	bottom: 60px;
+	top: auto;
+	height: 400px !important;
+	background-color: rgba(51, 51, 51, 0.4)
+}
+
+#menuSidebar .ui.iframe,
+#toolsSidebar.ui.sidebar .ui.iframe {
+	height: 100%
+}
+
+#menuSidebar {
+	background-color: rgba(51, 51, 51, 0.9) !important
+}
+
+#menuSidebar>.h-box {
+	height: 100%;
+	overflow: hidden
+}
+
+#menuSidebar {
+	overflow: hidden;
+	padding-left: 6px
+}
+
+#menuSidebar .level-1 {
+	list-style: none;
+	padding: 0
+}
+
+#menuSidebar .level-1>li {
+	margin: 0 0 2px 0;
+	background-color: rgba(74, 95, 123, 0.7);
+	padding: 0 12px;
+	line-height: 40px;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	cursor: pointer
+}
+
+#menuSidebar .level-1>li:hover,
+#menuSidebar .level-1>li.current {
+	background-color: rgba(74, 95, 123, 0.9);
+	color: #fff
+}
+
+#menuSidebar .level-2 {
+	display: none;
+	background-color: rgba(74, 95, 123, 0.9);
+	list-style: none;
+	padding: 12px;
+	margin: 0;
+	height: 100%
+}
+
+#menuSidebar .level-2.current {
+	overflow: auto;
+	display: block
+}
+
+#menuSidebar .level-2>li {
+	padding: 4px;
+	height: 100px
+}
+
+#menuSidebar .level-2>li>div {
+	cursor: pointer;
+	padding-top: 8px;
+	height: 100%;
+	color: rgba(255, 255, 255, 0.89);
+	background-color: rgba(51, 51, 51, 0.4);
+	text-align: center
+}
+
+#menuSidebar .level-2>li>div:hover {
+	-webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+	-moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08)
+}
+
+#menuSidebar .level-2>li>div:hover img {
+	opacity: 1
+}
+
+#menuSidebar .level-2>li>div img {
+	opacity: .8;
+	width: 40px;
+	margin: 0 auto
+}
+
+#userSidebar {
+	width: 16em;
+	left: auto;
+	background-color: rgba(45, 69, 94, 0.88);
+	border: 1px solid rgba(0, 0, 0, 0)
+}
+
+#userSidebar .box {
+	padding: 5em 1em 2em 1em
+}
+
+#userSidebar .box .ui.button {
+	border: 1px solid rgba(255, 255, 255, 0.7)
+}
+
+#userSidebar .ui.segment.basic-info {
+	background-color: transparent
+}
+
+#userSidebar .ui.segment.basic-info>.avatar {
+	display: inline-block;
+	border: 2px solid #fff;
+	border-radius: 50%
+}
+
+#userSidebar .ui.segment.basic-info .name {
+	margin-top: .5em;
+	line-height: 2em;
+	color: #fff;
+	font-size: 14px
+}
+
+#userSidebar>.v-box>.flex-box {
+	text-align: center
+}
+
+.select-button .ui.buttons .ui.button.positive {
+	background-color: rgba(51, 51, 51, 0.3) !important;
+	color: rgba(255, 255, 255, 0.7);
+	-webkit-box-shadow: inset 0px -2px 0px 0px #18a689;
+	-moz-box-shadow: inset 0px -2px 0px 0px #18a689;
+	box-shadow: inset 0px -2px 0px 0px #18a689
+}
+
+.select-button .ui.buttons .ui.button:first-child {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0
+}
+
+.select-button .ui.buttons .ui.button:hover {
+	background-color: rgba(51, 51, 51, 0.2) !important;
+	color: rgba(255, 255, 255, 0.7);
+	-webkit-box-shadow: inset 0px -2px 0px 0px #18a689;
+	-moz-box-shadow: inset 0px -2px 0px 0px #18a689;
+	box-shadow: inset 0px -2px 0px 0px #18a689
+}
+
+.select-button .ui.buttons .ui.button:last-child {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0
+}
+
+.ui.widget-table .table.item.current {
+	background-color: rgba(24, 166, 137, 0.1)
+}
+
+.ui.widget-table .table.item:hover {
+	background-color: rgba(24, 166, 137, 0.1) !important
+}
+
+#c-notify-tip-container .ui.notify-tip.message {
+	background: rgba(51, 51, 51, 0.55);
+	color: #fff !important
+}
+
+#c-notify-tip-container .ui.notify-tip.message.success {
+	background: rgba(24, 166, 137, 0.95)
+}
+
+#c-notify-tip-container .ui.notify-tip.message.warning {
+	background: rgba(242, 192, 55, 0.95)
+}
+
+#c-notify-tip-container .ui.notify-tip.message.error {
+	background: rgba(237, 85, 101, 0.95)
+}
+
+#c-notify-tip-container .ui.notify-tip.message.info {
+	background: rgba(49, 204, 236, 0.95)
+}
+
+#c-notify-tip-container .ui.notify-tip.message .header,
+#c-notify-tip-container .ui.notify-tip.message p {
+	color: #fff !important
+}
+
+#taskTable.ui.items-view.widget-table {
+	background-color: transparent
+}
+
+#taskTable.ui.items-view.widget-table table thead th {
+	background: transparent;
+	border-color: rgba(0, 0, 0, 0)
+}
+
+#taskTable.ui.items-view.widget-table table .table.item {
+	background-color: transparent;
+	color: rgba(255, 255, 255, 0.7)
+}
+
+#taskTable.ui.items-view.widget-table table .table.item td {
+	border-color: transparent;
+	color: rgba(248, 248, 248, 0.85)
+}
+
+#taskTable.ui.items-view.widget-table table .table.item td .priority {
+	padding: 4px 8px
+}
+
+#taskTable.ui.items-view.widget-table table .table.item td .priority-10 {
+	background-color: rgba(0, 0, 0, 0.2)
+}
+
+#taskTable.ui.items-view.widget-table table .table.item td .priority-20 {
+	background-color: rgba(0, 0, 0, 0.4)
+}
+
+#taskTable.ui.items-view.widget-table table .table.item td .priority-30 {
+	background-color: #00b19d
+}
+
+#taskTable.ui.items-view.widget-table table .table.item td .priority-40 {
+	background-color: #3bafda
+}
+
+#taskTable.ui.items-view.widget-table table .table.item td .priority-50 {
+	background-color: #f76397
+}
+
+#taskTable.ui.items-view.widget-table table .table.item td .task-link {
+	color: #9dd0ff;
+	text-decoration: underline
+}
+
+#taskTable.ui.items-view.widget-table table .table.item:nth-child(2n):not(.current) {
+	background: rgba(0, 0, 0, 0.08)
+}

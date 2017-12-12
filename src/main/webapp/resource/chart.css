@@ -1,0 +1,68 @@
+.chart-box {
+	padding: 0 8px 8px 8px;
+	margin-top: 8px;
+	border-bottom: 1px solid rgba(0,0,0,0)
+}
+.chart-box .p-chart {
+	overflow: hidden
+}
+.chart-box .p-chart>.item {
+	padding: 8px;
+	position: relative
+}
+.chart-box .p-chart>.item .content {
+	padding: 20px;
+	background-color: rgba(51,51,51,0.4);
+	height: 120px;
+	width: 100%
+}
+.chart-box .p-chart>.item .content>div {
+	display: inline-block
+}
+.chart-box .p-chart>.item .content>.gauge {
+	height: 100%
+}
+.chart-box .p-chart>.item .content>.gauge svg text {
+	stroke: #bccdd5 !important;
+	fill: #bccdd5 !important;
+	font-size: 14px
+}
+.chart-box .p-chart>.item .content .desc {
+	float: right
+}
+.chart-box .p-chart>.item .content .desc .counter {
+	text-align: right;
+	margin: 10px 0;
+	line-height: 30px;
+	font-size: 24px
+}
+.chart-box .p-chart>.item .content .desc .label {
+	font-size: 14px
+}
+.chart-box .p-chart>.item .content .background {
+	fill: rgba(195,195,195,0.15)
+}
+.chart-box .p-chart>.item .content.uw-count .foreground {
+	fill: #00b19d
+}
+.chart-box .p-chart>.item .content.uw-count .counter {
+	color: #00b19d
+}
+.chart-box .p-chart>.item .content.uw-aging .foreground {
+	fill: #3bafda
+}
+.chart-box .p-chart>.item .content.uw-aging .counter {
+	color: #3bafda
+}
+.chart-box .p-chart>.item .content.uw-return-rate .foreground {
+	fill: #f76397
+}
+.chart-box .p-chart>.item .content.uw-return-rate .counter {
+	color: #f76397
+}
+.chart-box .p-chart>.item .content.work-ratio .foreground {
+	fill: rgba(255,255,255,0.6)
+}
+.chart-box .p-chart>.item .content.work-ratio .counter {
+	color: rgba(255,255,255,0.6)
+}

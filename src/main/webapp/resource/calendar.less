@@ -1,0 +1,115 @@
+@import "../resources/global.less";
+@import "./variables.less";
+
+#calendarSubView {
+	height: 100%;
+}
+
+.my-calendar {
+	height: 100%;
+	border: 1px solid @borderColor;
+	background-color: @darkBackgroundColor;
+	padding: @spacing;
+
+	#month {
+		background-color: transparent;
+		line-height: 48px;
+		font-size: 28px;
+		color: rgba(255, 255, 255, 0.8);
+		text-align: center;
+	}
+
+	#todoList {
+		> .placeholder {
+			display: none;
+		}
+		border: 1px solid fadeOut(@borderColor,80);
+		background-color: fadein(@bannerBackgroundColor, 40%);
+
+		&.empty {
+			position: relative;
+			border: none;
+			> .placeholder {
+				display: block;
+				position: absolute;
+				left: 1px;
+				top: 1px;
+				right: 1px;
+				line-height: 80px;
+				text-align: center;
+				height: 80px;
+				border: 1px dashed rgba(68, 136, 187, 0.88);
+				background-color: rgba(68, 136, 187, 0.1);
+				color: @fontColor;
+				content: "";
+			}
+		}
+		.todo-item {
+			line-height: 32px;
+			&:not(:first-of-type) {
+				border-top: 1px solid @borderColor;
+			}
+			padding: 0 @spacing;
+			.title {
+				margin-left: @spacing;
+			}
+
+		}
+	}
+	overflow: hidden;
+}
+
+#calendar {
+	.date-table-wrapper {
+		min-width: 200px;
+		min-height: 180px;
+		table {
+			height: auto;
+			border: none;
+			border-left: 1px solid @borderColor;
+			tr {
+				td {
+					border-right: 1px solid @borderColor;
+					border-bottom: 1px solid @borderColor;
+					padding: 0px;
+					width: 28px;
+					height: 28px;
+					position: relative;
+					&.todo:before {
+						position: absolute;
+						top: 0;
+						right: 0;
+						content: "";
+						width: 0;
+						height: 0;
+						border-style: solid;
+						border-width: 0 8px 8px 0;
+						border-color: transparent rgb(255, 190, 110) transparent transparent;
+					}
+
+				}
+			}
+		}
+	}
+	.caption-panel {
+		background-color: transparent;
+		> .header {
+			display: none;
+		}
+		table {
+			border: 1px solid @borderColor;
+			tr {
+				background-color: transparent;
+				td {
+					color: @fontColor;
+					font-size: 16px;
+					line-height: 32px;
+				}
+			}
+		}
+	}
+
+	.date-table-wrapper .date-table td.selected div.label{
+		border-radius: 0;
+	}
+}

@@ -1,0 +1,372 @@
+@import "../resources/global.less";
+@import "variables.less";
+
+html body {
+	//padding-bottom: 100px;
+	background-color: #154265;
+	background-image: radial-gradient(farthest-side ellipse at 10% 0, #154265 20%, #637da7);
+	background-image: -webkit-radial-gradient(10% 0, farthest-side ellipse, #154265 20%, #637da7);
+	background-image: -moz-radial-gradient(10% 0, farthest-side ellipse, #154265 20%, #637da7);
+	background-attachment: fixed, fixed;
+
+	color: @fontColor;
+	font-weight: 400;
+
+	.ui.button, .ui.button.positive {
+		background-color: rgba(51, 51, 51, 0.3);
+		color: @fontColor;
+	}
+	.ui.button.primary {
+		background-color: rgba(51, 51, 51, 0.3) !important;
+		color: @fontColor;
+	}
+}
+
+.h-box {
+	> .flex-box {
+		overflow: hidden;
+	}
+}
+
+.main-wrapper {
+	background-color: transparent;
+}
+
+@pageHeaderItemColor: rgba(51, 51, 51, 0.4) !important;
+.page-header {
+	background-color: rgba(0, 0, 0, 0.2);
+	padding: 8px 0 8px 20px;
+	.ui.menu {
+		.app-name {
+			font-size: 20px;
+			color: @fontColor;
+		}
+
+		#userStatusPopup.ui.popup {
+			background-color: fadeIn(@darkBackgroundColor, 10);
+			border-color: @darkBackgroundColor;
+			&:before {
+				background: transparent;
+			}
+			message.ui.message {
+				color: @fontColor;
+				text-align: center;
+				background-color: @darkBackgroundColor;
+			}
+			.ui.button {
+				color: #fff;
+				background-color: #00b19d !important;
+			}
+		}
+
+		.item {
+			color: @fontColor;
+			.ui.basic.button {
+				color: @fontColor !important;
+				.box-shadow(~"0px 0px 0px 1px rgba(255, 255, 255, 0.2) inset !important");
+			}
+			i {
+				font-size: 16px;
+				margin: 0 4px !important;
+			}
+			padding: 0 8px;
+		}
+
+		.user.item {
+			color: @fontColor;
+			&:hover {
+				background-color: transparent;
+				color: #fff !important;
+				img{
+					border: 1px solid #fff;
+				}
+			}
+			span {
+				margin: 0 6px;
+			}
+		}
+	}
+}
+
+.page-banner {
+	background-color: transparent;
+	padding: 4px 20px;
+	.toolbar {
+		background-color: transparent;
+		a {
+			color: @fontColor;
+		}
+		.right.box {
+			margin-right: -4px;
+		}
+		.ui.input {
+			input {
+				line-height: 18px;
+				padding: 5px 12px !important;
+				background-color: rgba(51, 51, 51, 0.4) !important;
+				color: #f8f8f8;
+			}
+			::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+				color: @fontColor;
+			}
+			::-moz-placeholder { /* Firefox 19+ */
+				color: @fontColor;
+			}
+			:-ms-input-placeholder { /* IE 10+ */
+				color: @fontColor;
+			}
+			:-moz-placeholder { /* Firefox 18- */
+				color: @fontColor;
+			}
+
+			color: @fontColor;
+			i.icon {
+				width: 28px;
+			}
+
+		}
+	}
+}
+
+.page-footer {
+	padding: 0 20px;
+	background-color: rgba(0, 0, 0, 0.2);
+	.toolbar {
+		background-color: transparent;
+	}
+	.item {
+		width: 52px;
+		cursor: pointer;
+		i {
+			font-size: 24px;
+			line-height: 28px;
+			margin: 0;
+		}
+		color: #fff;
+		padding: 4px;
+		margin-left: 10px;
+		display: inline-block;
+		text-align: center;
+
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.16);
+		}
+	}
+
+}
+
+.task-container {
+	padding: 0px 8px 16px 16px;
+
+}
+
+.calendar-container {
+	padding: 0px 16px 16px 6px;
+
+}
+
+.task-container {
+	> .v-box {
+		border: @portalBorder;
+		background-color: rgba(51, 51, 51, 0.4);
+
+	}
+	.ui.toolbar, .ui.menu {
+		margin: 6px 20px;
+		background-color: transparent;
+		font-size: 12px;
+		.ui.button {
+			font-size: 12px;
+		}
+		.refresh.button {
+			border-radius: 0px;
+		}
+
+		> .header {
+			font-size: 14px;
+			margin-right: 16px;
+			span {
+				//padding-left: 8px;
+				line-height: 24px;
+				//.box-shadow(inset 2px 0px 0px 0px #18a689);
+			}
+		}
+	}
+	.ui.menu.pager.secondary {
+		.item {
+			color: @fontColor;
+		}
+	}
+
+}
+
+#menuSidebar, #toolsSidebar.ui.sidebar {
+	bottom: 60px;
+	top: auto;
+
+	height: 400px !important;
+	background-color: @darkBackgroundColor;
+	.ui.iframe {
+		height: 100%;
+	}
+}
+
+#menuSidebar {
+	> .h-box {
+		height: 100%;
+		overflow: hidden;
+	}
+	background-color: fadeIn(@darkBackgroundColor,50) !important;
+}
+
+@menuBackgroundColor: rgba(74, 95, 123, 0.9);
+
+#menuSidebar {
+	overflow: hidden;
+	.level-1 {
+		list-style: none;
+		padding: 0;
+		> li {
+			margin: 0 0 2px 0;
+			background-color: fade(@menuBackgroundColor, 70);
+			&:hover, &.current {
+				background-color: @menuBackgroundColor;
+				color: #fff;
+			}
+			padding: 0 12px;
+			line-height: 40px;
+			border-top-left-radius: 4px;
+			border-bottom-left-radius: 4px;
+			cursor: pointer;
+
+		}
+	}
+	padding-left: 6px;
+
+	.level-2 {
+		display: none;
+		background-color: @menuBackgroundColor;
+		list-style: none;
+		padding: 12px;
+		margin: 0;
+		&.current {
+			overflow: auto;
+			display: block;
+		}
+		> li {
+			padding: 4px;
+			> div {
+				cursor: pointer;
+				&:hover {
+					img {
+						opacity:1;
+
+					}
+					.box-shadow(0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08))
+				}
+				img {
+					opacity: 0.8;
+					width: 40px;
+					margin: 0 auto;
+				}
+				padding-top: 8px;
+				height: 100%;
+				color: rgba(255, 255, 255, 0.89);
+				background-color: @darkBackgroundColor;
+				text-align: center;
+			}
+			height: 100px;
+		}
+		height: 100%;
+	}
+}
+
+#userSidebar {
+	width: 16em;
+	left: auto;
+	background-color: rgba(45, 69, 94, 0.88);
+	border: @portalBorder;
+	.box {
+		padding: 5em 1em 2em 1em;
+
+		.ui.button {
+			border: 1px solid @fontColor;
+		}
+	}
+	.ui.segment.basic-info {
+
+		background-color: transparent;
+		> .avatar {
+			display: inline-block;
+			border: 2px solid #fff;
+			border-radius: 50%;
+		}
+		.name {
+			margin-top: 0.5em;
+			line-height: 2em;
+			color: #fff;
+			font-size: 14px;
+		}
+	}
+
+	> .v-box > .flex-box {
+		text-align: center;
+	}
+}
+
+.select-button {
+	.ui.buttons {
+		.ui.button.positive {
+			background-color: rgba(51, 51, 51, 0.3) !important;
+			color: @fontColor;
+			.box-shadow(inset 0px -2px 0px 0px @primaryColor)
+		}
+		.ui.button:first-child {
+			border-top-left-radius: 0px;
+			border-bottom-left-radius: 0px;
+		}
+		.ui.button:hover {
+			background-color: rgba(51, 51, 51, 0.2) !important;
+			color: @fontColor;
+			.box-shadow(inset 0px -2px 0px 0px @primaryColor)
+		}
+		.ui.button:last-child {
+			border-top-right-radius: 0px;
+			border-bottom-right-radius: 0px;
+		}
+	}
+}
+
+.ui.widget-table {
+	.table.item.current {
+		background-color: @tableHighlightRowBackground;
+	}
+
+	.table.item:hover {
+		background-color: @tableHighlightRowBackground !important;
+	}
+}
+
+#c-notify-tip-container {
+	.ui.notify-tip.message {
+		&.success {
+			background: fade(@primaryColor, 95);
+		}
+		&.warning {
+			background: fade(@warningColor, 95);
+		}
+		&.error {
+			background: fade(@negativeColor, 95);
+		}
+		&.info {
+			background: fade(@infoColor, 95);
+		}
+		background: fadeIn(@darkBackgroundColor, 15);
+		color: #fff !important;
+		.header, p {
+			color: #fff !important;
+		}
+	}
+}
+
+@import "table.less";

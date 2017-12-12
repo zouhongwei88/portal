@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<!--		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    	<meta name="apple-mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<base href="/">-->
+		<meta charset="utf-8" />
+
+		<link rel="stylesheet" type="text/css" href="resource/base/cola-ui/semantic.css">
+		<link rel="stylesheet" type="text/css" href="resource/base/cola-ui/cola.css"/>
+		<link rel="stylesheet" type="text/css" href="resource/chart.css">
+		<script src="resource/base/d3.js"></script>
+		<script src="resource/base/jquery/jquery-2.1.3.js"></script>
+  		<script src="resource/base/jquery/jquery.cookie.js"></script>
+		<script src="resource/base/cola-ui/3rd.js"></script>
+		<script src="resource/base/cola-ui/semantic.js"></script>
+		<script src="resource/base/cola-ui/cola.js"></script>
+    	<script src="resource/chart.js"></script>
+		<title>chart页面的展示</title>	
+	</head>
+	<body>
+		<script type="text/javascript">
+		</script>
+		<div class="chart-box">		
+				<div class="p-chart">
+					<div class="small-block-grid-1>
+						<div class="medium-block-grid-2">
+							<div class="large-block-grid-4">
+								<li class="item">
+						        	<div class="content">
+										<div class="uw-count">
+						        			<div id="uwCount" class="gauge" c-ignore=""></div> 
+						        			<div class="desc">
+						        				<div class="counter" c-bind="uwCount+'件'"></div>
+						        				<div class="label">院公告</div>        				
+						        			</div>
+						        		</div>  
+						        	</div>	
+		        				</li>
+						        <li class="item">
+						        	<div class="content">
+						        		<div class="uw-aging">
+						        			<div id="uwAging" class="gauge" c-ignore=""></div>
+						        			<div class="desc">
+						        				<div class="counter" c-bind="uwAging+'分钟'"></div>
+						        				<div class="label">代办事项</div>
+						        			</div>
+						        		</div>
+						        	</div>
+						        </li>
+						        <li class="item">
+						        	<div class="content">
+						        		<div class="uw-return-rate">
+						        			<div id="uwReturnRate" class="gauge" c-ignore=""></div>
+						        			<div class="desc">
+						        				<div class="counter" c-bind="uwReturnRate+'%'"></div>
+						        				<div class="label">事物委托</div>		        		
+						        			</div>
+						        		</div>
+						        	</div>
+						        </li>
+						        <li class="item">
+						        	<div class="content">
+						        		<div class="work-ratio">
+						        			<div id="workRatio" class="gauge" c-ignore=""></div>
+						        			<div class="desc">
+						        				<div class="counter" c-bind="workRatio+'%'"></div>
+						        				<div class="label">工作进展</div>
+						        			</div>
+						        		</div>
+						        	</div>
+						        </li>
+							</div>
+						</div>
+					</div>
+				</div>   
+      	</div>
+	</body>
+</html>

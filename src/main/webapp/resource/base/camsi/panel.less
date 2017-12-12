@@ -1,0 +1,22 @@
+@import "../global.less";
+
+.camsi {
+	.ui.panel {
+		background-color: @contentBackgroundColor;
+		> .header {
+			> .content {
+				background-color: @contentBackgroundColor;
+			}
+			border-bottom: 1px solid @borderColor;
+		}
+		> .content {
+			background-color: @contentBackgroundColor;
+		}
+
+		box-shadow: none;
+		&.basic{
+			border: 1px solid @borderColor;
+		}
+	}
+
+}

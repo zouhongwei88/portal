@@ -1,0 +1,52 @@
+@import "../resources/global.less";
+@import "./variables.less";
+
+#taskTable.ui.items-view.widget-table {
+	background-color: transparent;
+	table {
+		thead {
+			th {
+				background: transparent;
+				border-color: @borderColor;
+			}
+		}
+		.table.item {
+			background-color: transparent;
+			color: @fontColor;
+			td {
+				border-color: transparent;
+				color: @tableContentColor;
+				.priority{
+					padding: 4px 8px;
+				}
+				.priority-10 {
+					background-color: rgba(0, 0, 0, 0.2);
+				}
+				.priority-20 {
+					background-color: rgba(0, 0, 0, 0.4);
+				}
+				.priority-30 {
+					background-color: #00b19d;
+				}
+				.priority-40 {
+
+					background-color: #3bafda;
+				}
+
+				.priority-50 {
+					background-color: #f76397;
+
+				}
+
+				.task-link{
+					color: #9dd0ff;
+					text-decoration:underline;
+				}
+
+			}
+		}
+		.table.item:nth-child(2n):not(.current) {
+			background: rgba(0, 0, 0, 0.08);
+		}
+	}
+}

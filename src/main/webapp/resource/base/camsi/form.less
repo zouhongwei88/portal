@@ -1,0 +1,22 @@
+.ui.form {
+	.inline.field, .inline.fields {
+		label {
+			font-weight: normal !important;
+			min-width: 8em;
+			text-align: right;
+			&.auto-wide {
+				min-width: inherit;
+				padding-right: 1em;
+				padding-left: 1em;
+			}
+		}
+	}
+	.inline.field, .inline.fields > .field {
+		.ui.input {
+			&.two.wide {
+				min-width: 300px !important;
+			}
+			min-width: 150px !important;
+		}
+	}
+}

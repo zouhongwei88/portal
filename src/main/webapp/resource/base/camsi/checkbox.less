@@ -1,0 +1,38 @@
+@import "../global.less";
+
+.ui.checkbox {
+	label {
+		padding-left: 2.1em;
+
+		&:before {
+			backface-visibility: hidden;
+			.transform(scale(1) rotate(0));
+			.transition(all) !important;
+			.transition-duration(250ms) !important;
+			.border-radius(0);
+		}
+		&:after {
+			content: "" !important;
+			backface-visibility: hidden;
+			opacity: 0;
+			.transform(scale(0) rotate(80deg));
+			.transition(all) !important;
+			.transition-duration(250ms) !important;
+			width: 22px;
+			height: 9px;
+			border-bottom: 2px solid #009688;
+			border-left: 2px solid #009688;
+			border-bottom-left-radius: 2px;
+		}
+	}
+
+	input:checked ~ label {
+		&:before {
+			opacity: 0;
+			.transform(scale(0) rotate(-130deg));
+		}
+		&:after {
+			.transform(scale(1) rotate(-50deg));
+		}
+	}
+}

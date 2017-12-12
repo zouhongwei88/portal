@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="resource/base/cola-ui/semantic.css" />
+		<link rel="stylesheet" href="resource/base/cola-ui/cola.css" />
+		<link rel="stylesheet" href="resource/calc.css" />
+	</head>
+	<body>
+		<div id="container">
+			<div id="calc" class="calc">
+				<div id="top">
+					<div id="win-tool">
+						<span>计算器</span>
+						<a id="history"  href="#" title="历史记录"><i id="h" class="iconfont history"></i></a>
+					</div>
+					<div id="result">
+						<div id="express">
+							
+						</div>
+						<div id="res">
+							0
+						</div>
+					</div>
+				</div>
+				
+				<div id="bottom">
+					<div class="row">
+						<span id="reset" data-number = "C">清空</span>
+						<span id="remove" data-number = "←">退格</span>
+						<span  data-number = "%">%</span>
+						<span class="tool chu" data-number = "/">/</span>
+					</div>
+					<div class="row">
+						<span  data-number = "7">7</span>
+						<span  data-number = "8">8</span>
+						<span  data-number = "9">9</span>
+						<span class="tool cheng" data-number = "*">*</span>
+					</div>
+					<div class="row">
+						<span  data-number = "4">4</span>
+						<span  data-number = "5">5</span>
+						<span  data-number = "6">6</span>
+						<span class="tool jiang" data-number = "-">-</span>
+					</div>
+					
+					<div class="row">
+						<span  data-number = "1">1</span>
+						<span  data-number = "2">2</span>
+						<span  data-number = "3">3</span>
+						<span class="tool add" data-number = "+">+</span>
+					</div>
+					<div class="row">
+						<span class="zero" data-number = "0">0</span>
+						<span class="dian" data-number = ".">.</span>
+						<span id="equals" class="tool eq" data-number = "=">=</span>
+					</div>
+				</div>
+				
+				<div id="historyBox">
+					<div class="con">
+						<ul></ul>
+					</div>
+					<div class="remove">
+						<a href="javascript:;" title="清空历史记录">
+							<i class="iconfont del"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

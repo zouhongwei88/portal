@@ -1,0 +1,36 @@
+@import "../global.less";
+
+.transition[class*="shake mild"] {
+	.animation-duration(250ms);
+	.animation-name(mildShake);
+}
+
+/* Shake */
+
+@-webkit-keyframes mildShake {
+	0%, 100% {
+		-webkit-transform: translateX(0);
+	}
+
+	12.5%, 50%, 87.5% {
+		-webkit-transform: translateX(-5px);
+	}
+
+	25%, 75% {
+		-webkit-transform: translateX(5px);
+	}
+}
+
+@keyframes mildShake {
+	0%, 100% {
+		transform: translateX(0);
+	}
+
+	12.5%, 50%, 87.5% {
+		transform: translateX(-5px);
+	}
+
+	25%, 75% {
+		transform: translateX(5px);
+	}
+}

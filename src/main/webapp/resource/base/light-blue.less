@@ -1,0 +1,40 @@
+@import "global.less";
+
+@primaryColor: #00b3f7;
+@revertFontColor: white;
+
+.ui.button.primary {
+	background-color: @primaryColor !important;
+}
+
+.ui.positive.button, .ui.positive.buttons .button {
+	background-color: @primaryColor !important;
+}
+
+.ui.positive.button:hover, .ui.positive.buttons .button:hover {
+	background-color: @lightPrimaryColor !important;
+}
+
+.ui.tree .tree.item.current>.tree.node {
+	background-color: @primaryColor !important;
+	color: @revertFontColor !important;
+}
+
+.ui.tree {
+	color: @revertFontColor !important;
+	background-color: transparent !important;
+	.tree.item {
+		color: @revertFontColor !important;
+		background-color: transparent !important;
+		& > .tree.node, & > .tree.node:hover {
+			color: @revertFontColor !important;
+			background-color: transparent !important;
+		}
+	}
+}
+
+.ui.widget-table {
+	table td, .ui.widget-table table th {
+		border-color: transparent !important;
+	}
+}

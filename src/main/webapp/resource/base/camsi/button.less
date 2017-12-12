@@ -1,0 +1,22 @@
+@import "../global.less";
+
+.ui.button {
+	.border-radius(0);
+	font-weight: normal !important;
+
+	&.primary {
+		background: @primaryColor !important;
+	}
+}
+
+.ui.action.input:not([class*="left action"]) > .dropdown:last-child,
+.ui.action.input:not([class*="left action"]) > .button:last-child,
+.ui.action.input:not([class*="left action"]) > .buttons:last-child > .button {
+	.border-radius(0);
+}
+
+.ui.buttons.selector{
+	>.button{
+		padding: 6px 8px;
+	}
+}

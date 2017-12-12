@@ -1,0 +1,522 @@
+/* Colors */
+/* Font Color */
+/* Background Color */
+/* Border Color */
+/* Theme Color */
+/* Input */
+/* main page */
+.camsi.material .ui.input {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: 0;
+}
+.camsi.material .ui.input > input {
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+  border: 0 !important;
+}
+.camsi.material .ui.input:before {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  content: "";
+  background: #e0e0e0;
+}
+.camsi.material .ui.input.error:before {
+  height: 2px;
+  background: #ed5565;
+}
+.camsi.material .ui.input:after {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  content: "";
+  -webkit-transition: all;
+  -moz-transition: all;
+  -o-transition: all;
+  transition: all;
+  -webkit-transition-duration: 300ms;
+  -moz-transition-duration: 300ms;
+  -o-transition-duration: 300ms;
+  transition-duration: 300ms;
+}
+.camsi.material .ui.input.focused:after {
+  width: 100%;
+  background: #18a689;
+}
+.camsi.material .ui.input.error:after {
+  width: 0 !important;
+}
+.ui.checkbox label {
+  padding-left: 2.1em;
+}
+.ui.checkbox label:before {
+  backface-visibility: hidden;
+  -webkit-transform: scale(1) rotate(0);
+  -moz-transform: scale(1) rotate(0);
+  -ms-transform: scale(1) rotate(0);
+  -o-transform: scale(1) rotate(0);
+  transform: scale(1) rotate(0);
+  -webkit-transition: all !important;
+  -moz-transition: all !important;
+  -o-transition: all !important;
+  transition: all !important;
+  -webkit-transition-duration: 250ms !important;
+  -moz-transition-duration: 250ms !important;
+  -o-transition-duration: 250ms !important;
+  transition-duration: 250ms !important;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.ui.checkbox label:after {
+  content: "" !important;
+  backface-visibility: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0) rotate(80deg);
+  -moz-transform: scale(0) rotate(80deg);
+  -ms-transform: scale(0) rotate(80deg);
+  -o-transform: scale(0) rotate(80deg);
+  transform: scale(0) rotate(80deg);
+  -webkit-transition: all !important;
+  -moz-transition: all !important;
+  -o-transition: all !important;
+  transition: all !important;
+  -webkit-transition-duration: 250ms !important;
+  -moz-transition-duration: 250ms !important;
+  -o-transition-duration: 250ms !important;
+  transition-duration: 250ms !important;
+  width: 22px;
+  height: 9px;
+  border-bottom: 2px solid #009688;
+  border-left: 2px solid #009688;
+  border-bottom-left-radius: 2px;
+}
+.ui.checkbox input:checked ~ label:before {
+  opacity: 0;
+  -webkit-transform: scale(0) rotate(-130deg);
+  -moz-transform: scale(0) rotate(-130deg);
+  -ms-transform: scale(0) rotate(-130deg);
+  -o-transform: scale(0) rotate(-130deg);
+  transform: scale(0) rotate(-130deg);
+}
+.ui.checkbox input:checked ~ label:after {
+  -webkit-transform: scale(1) rotate(-50deg);
+  -moz-transform: scale(1) rotate(-50deg);
+  -ms-transform: scale(1) rotate(-50deg);
+  -o-transform: scale(1) rotate(-50deg);
+  transform: scale(1) rotate(-50deg);
+}
+.ui.button {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  font-weight: normal !important;
+}
+.ui.button.primary {
+  background: #18a689 !important;
+}
+.ui.action.input:not([class*="left action"]) > .dropdown:last-child,
+.ui.action.input:not([class*="left action"]) > .button:last-child,
+.ui.action.input:not([class*="left action"]) > .buttons:last-child > .button {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.ui.buttons.selector > .button {
+  padding: 6px 8px;
+}
+.ui.message {
+  border-width: 0 !important;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+.ui.dialog {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.ui.iframe {
+  overflow: hidden;
+}
+.transition[class*="shake mild"] {
+  -webkit-animation-duration: 250ms;
+  -moz-animation-duration: 250ms;
+  -o-animation-duration: 250ms;
+  animation-duration: 250ms;
+  -webkit-animation-name: mildShake;
+  -moz-animation-name: mildShake;
+  -o-animation-name: mildShake;
+  animation-name: mildShake;
+}
+/* Shake */
+@-webkit-keyframes mildShake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+  }
+  12.5%,
+  50%,
+  87.5% {
+    -webkit-transform: translateX(-5px);
+  }
+  25%,
+  75% {
+    -webkit-transform: translateX(5px);
+  }
+}
+@keyframes mildShake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  12.5%,
+  50%,
+  87.5% {
+    transform: translateX(-5px);
+  }
+  25%,
+  75% {
+    transform: translateX(5px);
+  }
+}
+.camsi .ui.panel {
+  background-color: #fff;
+  box-shadow: none;
+}
+.camsi .ui.panel > .header {
+  border-bottom: 1px solid #e0e0e0;
+}
+.camsi .ui.panel > .header > .content {
+  background-color: #fff;
+}
+.camsi .ui.panel > .content {
+  background-color: #fff;
+}
+.camsi .ui.panel.basic {
+  border: 1px solid #e0e0e0;
+}
+.ui.form .inline.field label,
+.ui.form .inline.fields label {
+  font-weight: normal !important;
+  min-width: 8em;
+  text-align: right;
+}
+.ui.form .inline.field label.auto-wide,
+.ui.form .inline.fields label.auto-wide {
+  min-width: inherit;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+.ui.form .inline.field .ui.input,
+.ui.form .inline.fields > .field .ui.input {
+  min-width: 150px !important;
+}
+.ui.form .inline.field .ui.input.two.wide,
+.ui.form .inline.fields > .field .ui.input.two.wide {
+  min-width: 300px !important;
+}
+@font-face {
+  font-family: "iconfont";
+  src: url(../font/iconfont.ttf);
+}
+.iconfont {
+  font-family: iconfont !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+}
+.icon-fabu2:before { content: "\e604"; }
+
+.icon-neirongshezhi:before { content: "\e601"; }
+
+.icon-edit:before { content: "\e607"; }
+
+.icon-shangchuan:before { content: "\e6cb"; }
+
+.icon-tilekpi:before { content: "\e608"; }
+
+.icon-tongzhi:before { content: "\e609"; }
+
+.icon-renwutongji:before { content: "\e60a"; }
+
+.icon-bianji:before { content: "\e60b"; }
+
+.icon-liaotian:before { content: "\e62e"; }
+
+.icon-xiaoxi:before { content: "\e630"; }
+
+.icon-zhuye:before { content: "\e602"; }
+
+.icon-shang:before { content: "\e623"; }
+
+.icon-publish:before { content: "\e60c"; }
+
+.icon-anli:before { content: "\e631"; }
+
+.icon-104:before { content: "\e63b"; }
+
+.icon-wodekehu:before { content: "\e60d"; }
+
+.icon-fabu:before { content: "\e60e"; }
+
+.icon-xuanze:before { content: "\e60f"; }
+
+.icon-chexian:before { content: "\e629"; }
+
+.icon-sidebar:before { content: "\e606"; }
+
+.icon-gmxinjianxingcheng:before { content: "\e610"; }
+
+.icon-pei:before { content: "\e611"; }
+
+.icon-fabu1:before { content: "\e612"; }
+
+.icon-cainiaoiconshangjiashangpinguanli:before { content: "\e621"; }
+
+.icon-xiugaibaojiaqingqiuxianzhongxinxi:before { content: "\e613"; }
+
+.icon-gerenziliao:before { content: "\e603"; }
+
+.icon-shoudan:before { content: "\e605"; }
+
+.icon-shanxiyidongduankaoqinjiankongzhishikushouye01:before { content: "\e614"; }
+
+.icon-xinzneghetong:before { content: "\e654"; }
+
+.icon-chanpinshaixuan:before { content: "\e615"; }
+
+.icon-baoxianchengbao:before { content: "\e616"; }
+
+.icon-chanpinxiangqing:before { content: "\e617"; }
+
+.icon-kpi:before { content: "\e618"; }
+
+.icon-kehuxinxi:before { content: "\e619"; }
+
+.icon-anli2:before { content: "\e636"; }
+
+.icon-baojia:before { content: "\e61a"; }
+
+.icon-moxing01:before { content: "\e6a9"; }
+
+.icon-1:before { content: "\e620"; }
+
+.icon-wodecaopan:before { content: "\e61b"; }
+
+.icon-chanpinjianjie:before { content: "\e61c"; }
+
+.icon-drag-copy:before { content: "\e625"; }
+
+.icon-18jiaonangxinjiancaipin:before { content: "\e61d"; }
+
+.icon-shili:before { content: "\e638"; }
+
+.icon-weibiaoti26:before { content: "\e627"; }
+
+.icon-notes:before { content: "\e62c"; }
+
+.icon-renwuzhongxin:before { content: "\e61e"; }
+
+.icon-wodegongzuotai:before { content: "\e622"; }
+
+.icon-gongneng:before { content: "\e600"; }
+
+.icon-lipei:before { content: "\e61f"; }
+
+.icon-caichanxian:before { content: "\e62a"; }
+
+.icon-baojia1:before { content: "\e632"; }
+
+.icon-shenhetongguo:before { content: "\e66b"; }
+
+.icon-daishenhe:before { content: "\e656"; }
+
+.icon-geren:before { content: "\e62b"; }
+
+.icon-feiyong:before { content: "\e957"; }
+
+.icon-qiandinghetong:before { content: "\e65b"; }
+
+.icon-chahao:before { content: "\e674"; }
+
+.icon-duihao:before { content: "\e675"; }
+
+.icon-item:before { content: "\e628"; }
+
+.icon-genzong:before { content: "\e633"; }
+
+.icon-iconfontwenjian2:before { content: "\e639"; }
+
+.icon-qiang:before { content: "\e624"; }
+
+.icon-tuodong:before { content: "\e626"; }
+
+.icon-eduda:before { content: "\e692"; }
+
+.icon-baoxian:before { content: "\e68d"; }
+
+.icon-jisuanqi:before { content: "\e62d"; }
+
+.icon-yinzhangkezhang:before { content: "\e63a"; }
+
+.icon-comments:before { content: "\e62f"; }
+
+.icon-pduanzhucaidanbaofeirenling:before { content: "\e6c3"; }
+
+.icon-hebaochaxun:before { content: "\e634"; }
+
+.icon-chaxun:before { content: "\e635"; }
+
+.icon-danzhengguanli:before { content: "\e6d3"; }
+
+.icon-hebao:before { content: "\e637"; }
+
+.icon-daiban:before { content: "\e64a"; }
+
+.icon-baoxian1:before { content: "\e63c"; }
+
+
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+html body {
+  font-size: 12px !important;
+  color: #676a6c;
+}
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5 {
+  font-weight: inherit;
+  margin: 0 !important;
+}
+html body h1 {
+  font-size: 1.8rem;
+}
+html body h2 {
+  font-size: 1.6rem;
+}
+html body h3 {
+  font-size: 1.4rem;
+}
+html body h4 {
+  font-size: 1.2rem;
+}
+html body a,
+html body .link {
+  color: #337ab7;
+  cursor: pointer;
+}
+html body a.primary,
+html body .link.primary {
+  color: #337ab7;
+}
+html body a.primary:hover,
+html body .link.primary:hover,
+html body a.primary:active,
+html body .link.primary:active,
+html body a.primary:focus,
+html body .link.primary:focus {
+  color: #285f8f;
+}
+html body a.secondary,
+html body .link.secondary {
+  color: #23c6c8;
+}
+html body a.secondary:hover,
+html body .link.secondary:hover,
+html body a.secondary:active,
+html body .link.secondary:active,
+html body a.secondary:focus,
+html body .link.secondary:focus {
+  color: #1b9b9d;
+}
+html body a.tertiary,
+html body .link.tertiary {
+  color: #1ed3ae;
+}
+html body a.tertiary:hover,
+html body .link.tertiary:hover,
+html body a.tertiary:active,
+html body .link.tertiary:active,
+html body a.tertiary:focus,
+html body .link.tertiary:focus {
+  color: #1b9b9d;
+}
+html body small {
+  font-size: 0.85rem;
+}
+.default-background {
+  background-color: #f3f3f4;
+}
+.light-background {
+  background-color: #fbfbfb;
+}
+.dark-background {
+  background-color: #ebebed;
+}
+.content-background {
+  background-color: #fff;
+}
+.primary-background {
+  background-color: #18a689;
+}
+.light-primary-background {
+  background-color: #1ed3ae;
+}
+.dark-primary-background {
+  background-color: #0e6352;
+}
+.secondary-background {
+  background-color: #e59f52;
+}
+.light-secondary-background {
+  background-color: #e8a964;
+}
+.dark-secondary-background {
+  background-color: #e08b2f;
+}
+.tertiary-background {
+  background-color: #293846;
+}
+.light-tertiary-background {
+  background-color: #3c5266;
+}
+.dark-tertiary-background {
+  background-color: #0d1116;
+}
+.fourthly-background {
+  background-color: #23c6c8;
+}
+.light-fourthly-background {
+  background-color: #26d7d9;
+}
+.dark-fourthly-background {
+  background-color: #1da4a5;
+}
+.floating {
+  border: 1px solid #e0e0e0;
+}

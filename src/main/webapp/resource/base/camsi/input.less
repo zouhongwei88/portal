@@ -1,0 +1,48 @@
+@import "../global.less";
+.camsi.material {
+.ui.input {
+	.border-radius(0);
+	border: 0;
+
+	> input {
+		.border-radius(0) !important;
+		border: 0 !important;
+	}
+
+	&:before {
+		position: absolute;
+		z-index: 1;
+		bottom: 0;
+		left: 0;
+		height: 1px;
+		width: 100%;
+		content: "";
+		background: @borderColor;
+	}
+
+	&.error:before {
+		height: 2px;
+		background: @negativeColor;
+	}
+
+	&:after {
+		position: absolute;
+		z-index: 3;
+		bottom: 0;
+		left: 0;
+		height: 2px;
+		width: 0;
+		content: "";
+		.transition(all);
+		.transition-duration(300ms);
+	}
+
+	&.focused:after {
+		width: 100%;
+		background: @focusedInputBorderColor;
+	}
+
+	&.error:after {
+		width: 0 !important;
+	}
+}}

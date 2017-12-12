@@ -1,0 +1,152 @@
+@import "../global.less";
+
+#docContent {
+	padding: 1.5em;
+}
+
+#docBackground {
+	overflow: hidden;
+}
+
+#titleBar {
+	.title {
+		.box-pack(start);
+		padding-left: 1em;
+	}
+}
+
+#tableItemsPane {
+	background: @contentBackgroundColor;
+	padding: 2em;
+	height: 100%;
+}
+
+#tableItems {
+	height: 100%;
+	.image {
+		width: 100%;
+		min-height: 2em;
+	}
+}
+
+.edit-content {
+	background: @lightBackgroundColor;
+	padding: 1.5em;
+	overflow: auto;
+}
+
+autoform.ui.form {
+	display: block;
+	padding: 2em;
+	background: @contentBackgroundColor;
+	.field {
+		font-size: 14px !important;
+		min-height: 2.2em !important;
+		line-height: 2.2em !important;
+	}
+	label {
+		text-align: right !important;
+		width: 10em !important;
+		font-weight: normal !important;
+	}
+}
+
+#conditionBrief {
+	background: @tipBarBackgroundColor;
+	padding: 0.5em 1em;
+	display: none;
+	.title {
+		color: @fontColor;
+		margin-right: 1em;
+		&:after {
+			content: " - ";
+		}
+	}
+	.property {
+		color: @descriptionFontColor;
+		margin-right: 0.5em;
+		&:after {
+			content: ":";
+		}
+	}
+	.value {
+		color: @fontColor;
+		margin-right: 1em;
+	}
+}
+
+#layerQuery {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: @contentBackgroundColor;
+	padding: 1em 1.5em 0.5em 1.5em;
+
+	.title {
+		font-size: 120%;
+		padding: 1em;
+	}
+	.button-pane {
+		text-align: right;
+		padding-bottom: 1em;
+	}
+}
+
+#layerUpload {
+	height: 40%;
+	background: @contentBackgroundColor;
+	padding: 1em;
+
+	.title {
+		padding: 6px 0 24px 0;
+		font-size: 110%;
+	}
+
+	#uploadFileList {
+		text-align: center;
+	}
+
+	.button-pane {
+		text-align: center;
+
+		#buttonSelectFile {
+			input {
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}
+
+.ui.layer {
+	background: @contentBackgroundColor;
+
+	.ui.title-bar {
+		border-width: 0;
+		margin: 0 !important;
+		padding: 0.5em 0;
+		.right.menu {
+			>* {
+				margin-right: 0.5em;
+			}
+		}
+	}
+}
+
+.drag-handle {
+	background:url(../images/handler.png) no-repeat center;
+	width: 100%;
+	height: 33px;
+}
+
+.ui-sortable-placeholder >td {
+	border-style: none !important;
+}
+
+.ui-sortable-helper{
+	background: lighten(@lightPrimaryColor, 20%) !important;
+	overflow: hidden;
+}
