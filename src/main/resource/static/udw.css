@@ -225,7 +225,9 @@ html body .ui.button.primary {
 #toolsSidebar.ui.sidebar .ui.iframe {
 	height: 100%
 }
-
+iframe {
+	height: 100%
+}
 #menuSidebar {
 	background-color: rgba(51, 51, 51, 0.9) !important
 }

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<link rel="stylesheet" type="text/css" href="resource/base/cola-ui/semantic.css">
+	<link rel="stylesheet" type="text/css" href="resource/base/cola-ui/cola.css"/>
+	<link rel="stylesheet" type="text/css" href="resource/udw.css" />
+	<link rel="stylesheet" type="text/css" href="resource/base/common/common.css" />
+	<link rel="stylesheet" type="text/css" href="resource/chart.css">
+	<link rel="stylesheet" type="text/css" href="resource/calc.css">
+	<link rel="stylesheet" type="text/css" href="resource/calendar.css"/>
+	</head>
+	<body>
+			<div class="v-box">
+			<!--
+            	作者：offline
+            	时间：2017-12-12
+            	描述:顶部公共部分
+            -->
+			<div class="box page-header">
+				<c-menu class="secondary">
+					<div class="item">
+						<span class="app-name">中国航天发动机研究院</span>
+					</div>
+					<div class="right menu">
+						<div class="item" id="userStatus">
+							<c-button class="inverted basic" caption="在线"></c-button>
+						</div>
+						<div id="userStatusPopup" class="ui popup bottom center transition hidden" style="width:400px; height:180px">
+							<div class="ui segment basic">
+								<message class="ui message" style="padding:20px;">
+									<div>切换系统中的登录状态!</div>
+								</message>
+								<c-button class="fluid primary" caption="我要隐身"></c-button>
+							</div>
+						</div>
+						<div class="item">
+							<i calss="icon wait"></i>
+							<span c-bind="time"></span>
+						</div>
+						<a class="item user" c-onclick="toggleUserSidebar()">
+							<img class="ui image avatar" src="resource/base/images/avatars/alex.png" />
+							<i class="icon angle down"></i>
+						</a>
+					</div>
+				</c-menu>
+			</div>
+			<div class="box page-banner">
+				<c-toolbar>
+					<div class="item">
+						<i class="icon announcement"></i>
+						<a>关于总公司核保下发的核保规则指导意见的通知</a>
+					</div>
+					<div class="right box">
+						<c-input class="transparent" icon="search" placeholder="搜索..." iconPosition="right"></c-input>
+					</div>
+				</c-toolbar>
+			</div>
+			<!--四个圆环
+            -->
+			<div class="box show-on-ready">
+				<div class="chart-box">		
+						<div class="p-chart small-block-grid-1 medium-block-grid-2 large-block-grid-4">
+							<li class="item">
+					        	<div class="content uw-count"> 		
+				        			<div id="uwCount" class="gauge" c-ignore=""></div> 
+				        			<div class="desc">
+				        				<div class="counter" c-bind="uwCount+'件'"></div>
+				        				<div class="label">院公告</div>        				
+				        			</div>		        		  
+					        	</div>	
+		    				</li>
+					        <li class="item">
+					        	<div class="content uw-aging">		        		
+				        			<div id="uwAging" class="gauge" c-ignore=""></div>
+				        			<div class="desc">
+				        				<div class="counter" c-bind="uwAging+'分钟'"></div>
+				        				<div class="label">代办事项</div>
+				        			</div>			        		
+					        	</div>
+					        </li>
+					        <li class="item">
+					        	<div class="content uw-return-rate">		        		
+				        			<div id="uwReturnRate" class="gauge" c-ignore=""></div>
+				        			<div class="desc">
+				        				<div class="counter" c-bind="uwReturnRate+'%'"></div>
+				        				<div class="label">事物委托</div>		        		
+				        			</div>			        		
+					        	</div>
+					        </li>
+					        <li class="item">
+					        	<div class="content work-ratio">			        		
+				        			<div id="workRatio" class="gauge" c-ignore=""></div>
+				        			<div class="desc">
+				        				<div class="counter" c-bind="workRatio+'%'"></div>
+				        				<div class="label">工作进展</div>
+				        			</div>			        		
+					        	</div>
+					        </li>
+					 </div>   
+		      	</div>
+			</div>
+			<!--
+            	作者：zhaozhen
+            	时间：2017-12-12
+            	描述：表格和日历
+            -->
+			<div class="flex-box">
+				<div class="main-wrapper">
+					<div class="h-box" style="height: 100%;">
+						<div class="flex-box">
+							<div class="task-container">
+								<div class="v-box">
+									<div class="box">
+										<c-toolbar>
+											<div class="item header">
+												邮件列表
+											</div>
+											<div class="item">
+												<c-select-button id="stateSelector" c-items="items" bind="filterValue" change="typeChange" keyProperty="key" textProperty="value">
+												</c-select-button>
+											</div>
+											<div class="right box">
+												<c-button class="primary refresh" caption="刷新" width="80px" click="flushTask"></c-button>
+											</div>
+										</c-toolbar>
+									</div>
+									<div class="flex-box">
+										<div>
+											<c-table id="taskTable" class="striped" height="100%">
+												<template name="link">
+												    <div class="task-link" c-bind="item.businessTaskId" c-onclick="openTask(item)">
+												    	
+												    </div>
+												</template>
+												<template name="priority">
+												    <div c-bind="item.businessTaskId" c-onclick="openTask(item)">
+												    	<span c-class="'priority-'+item.priority+' priority'" c-bind="translatePriority(item.priority)"></span>
+												    </div>
+												</template>
+											</c-table>
+										</div>
+									</div>
+									<div class="box">
+										<c-pager c-bind="tasks">
+											
+										</c-pager>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--
+                        	作者：offline
+                        	时间：2017-12-12
+                        	描述：日历包裹容器
+                        -->
+                        <div class="box calendar-container">
+                        	<div id="calendarSubView">
+                        			<div class="my-calendar">
+                        				<div class="calendar-box">
+                        					<div id="month" c-bind="month"></div>
+                        					<div id="calendar" c-widget="calendar"></div>
+                        				</div>
+                        				<div id="todoList" c-class="empty:todoIsEmpty(todos)">
+                        					<div class="todo-item" c-repeat="todo in todos">
+                        						<span class="time" c-bind="formatDate(todo.planDate,'HH:mm')"></span>
+                        						<span class="title" c-bind="todo.title"></span>
+                        					</div>
+                        					<div class="placeholder">
+                        						今日无待办
+                        					</div>
+                        				</div>
+                        			</div>
+                        	</div>
+                        </div>
+						
+					</div>
+				</div>
+			</div>
+			
+			<div class="box page-footer show-on-ready">
+				<c-toolbar>
+					<div class="item" c-onclick="toggleMenu()">
+						<i class="icon content"></i>
+						<div class="label">菜单</div>
+					</div>
+					<div class="right box">
+						<div class="item" c-onclick="toggleCalculator()">
+							<i class="icon iconfont icon-jisuanqi"></i>
+							<div class="label">计算器</div>
+						</div>
+						<div class="item" c-onclick="toggleNotes()">
+							<i class="icon iconfont icon-notes"></i>
+							<div class="label">记事本</div>
+						</div>
+					</div>			
+				</c-toolbar>
+			</div>
+
+			<!--
+            	作者：offline
+            	时间：2017-12-12
+            	描述：计算器控件
+            -->
+			<c-sidebar id="toolsSidebar" class="show-on-ready" size="300px" direction="right", modalOpacity="0">
+				<iframe src="index.html"></iframe>
+			</c-sidebar>
+			<c-sidebar id="menuSidebar" class="show-on-ready" modalOpacity="0" size="300px">
+				<div class="h-box">
+					<ul class="box level-1">
+						<li c-repeat="menu in menus" c-onclick="changeMenu(menu)">
+							<div c-bind="menu.label">
+								
+							</div>
+						</li>
+					</ul>
+					<div class="flex-box">
+						<div>
+							<ul c-repeat="menu in menus" class="level-2 small-block-grid-2" >
+								<li c-repeat="menuItem in menu.menus">
+									<div c-onclick="openLink(menuItem)">
+										<img src="resource/base/images/file.png" />
+										<div c-bind="menuItem.label"></div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</c-sidebar>
+			
+			<c-sidebar id="userSidebar" modalOpacity="0" direction="right" size="220">
+				<div class="v-box">
+					<div class="box">
+						<div class="ui segment text-center basic inverted basic-info">
+							<div class="avatar">
+								<img class="ui image tiny avatar centered" src="resource/base/images/avatars/alex.png" />
+							</div>
+							<div class="name" c-bind="user.name"></div>
+						</div>
+					</div>
+					<div class="flex-box">
+						<div>
+							<div class="roles"></div>
+						</div>
+					</div>
+					<div class="box text-center">
+						<div class="sign-out-btn primary" c-widget="Button; caption:安全退出; click:logout"></div>
+					</div>
+				</div>
+			</c-sidebar>
+			
+		</div>			
+	<script src="resource/base/d3.js"></script>
+	<script src="resource/base/jquery/jquery-2.1.3.js"></script>
+	<script src="resource/base/jquery/jquery.cookie.js"></script>
+	<script src="resource/base/cola-ui/3rd.js"></script>
+	<script src="resource/base/cola-ui/semantic.js"></script>
+	<script src="resource/base/cola-ui/cola.js"></script>
+	<script src="resource/base/cola-ui/i18n/zh/cola.js"></script>
+	<script src="resource/udw.js"></script>
+	<script src="resource/chart.js"></script>
+	<script src="resource/calc.js"></script>
+	<script src="resource/calendar.js"></script>
+	</body>
+</html>

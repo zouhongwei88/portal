@@ -63,16 +63,21 @@ cola(function (model) {
 
 		},
 		toggleCalculator: function () {
-			cola.widget("toolsSidebar").toggle()
+			cola.widget("toolsSidebar").toggle();
 		},
 		toggleMenu: function () {
-			cola.widget("menuSidebar").toggle()
+			cola.widget("menuSidebar").toggle();
 		},
 		flushTask: function (self, arg) {
 			model.flush("tasks")
 		},
 		changeMenu: function (menu) {
-			model.get("menus").setCurrent(menu)
+			var menus= menu.get("menus");
+			menus.each(function(item){
+				console.log(item.get("label"));
+			});
+			console.log(menu.get("menus"));
+			model.get("menus").setCurrent(menu);
 		},
 		openLink: function (menu) {
 			var data = menu.toJSON();
@@ -107,7 +112,7 @@ cola(function (model) {
 			}
 		},
 		provider: {
-			url: "./resource/data/tasks.json",
+			url: "/data/tasks.json",
 			parameter: {
 				keyword: "{{keyword}}"
 			},
@@ -119,12 +124,12 @@ cola(function (model) {
 	});
 	model.describe("menus", {
 		provider: {
-			url: "./resource/data/menu.json"
+			url: "/menus"
 		}
 	});
 	model.describe("news", {
 		provider: {
-			url: "./portal/data/news.json"
+			url: "/data/menu.json"
 		}
 	});
 

@@ -2,7 +2,7 @@ window.todos = {};
 
 window.getMyTodoLists = function (month) {
 	$.ajax({
-		url: "./portal/data/todos.json",
+		url: "./resource/data/tasks.json",
 		async: false,
 		success: function (data) {
 			for (var i = 0; i < data.length; i++) {

@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="UTF-8"/>
 		<title></title>
-	<link rel="stylesheet" type="text/css" href="resource/base/cola-ui/semantic.css">
-	<link rel="stylesheet" type="text/css" href="resource/base/cola-ui/cola.css"/>
-	<link rel="stylesheet" type="text/css" href="resource/udw.css" />
-	<link rel="stylesheet" type="text/css" href="resource/base/common/common.css" />
-	<link rel="stylesheet" type="text/css" href="resource/chart.css">
-	<link rel="stylesheet" type="text/css" href="resource/calc.css">
-	<link rel="stylesheet" type="text/css" href="resource/calendar.css"/>
+
+	<link rel="stylesheet" type="text/css" href="base/cola-ui/semantic.css"/>
+	<link rel="stylesheet" type="text/css" href="base/cola-ui/cola.css"/>
+	<link rel="stylesheet" type="text/css" href="udw.css" />
+	<link rel="stylesheet" type="text/css" href="base/common/common.css" />
+	<link rel="stylesheet" type="text/css" href="chart.css"/>
+	<link rel="stylesheet" type="text/css" href="calc.css"/>
+	<link rel="stylesheet" type="text/css" href="calendar.css"/>
 	</head>
 	<body>
 		<div class="v-box">
@@ -40,7 +41,7 @@
 							<span c-bind="time"></span>
 						</div>
 						<a class="item user" c-onclick="toggleUserSidebar()">
-							<img class="ui image avatar" src="resource/base/images/avatars/alex.png" />
+							<img class="ui image avatar" src="/base/images/avatars/alex.png" />
 							<i class="icon angle down"></i>
 						</a>
 					</div>
@@ -203,68 +204,67 @@
             	时间：2017-12-12
             	描述：计算器控件
             -->
-			<c-sidebar id="toolsSidebar" class="show-on-ready" size="300px" direction="right", modalOpacity="0">
+			<c-sidebar id="toolsSidebar" class="show-on-ready" size="300px" direction="right" modalOpacity="0">
 				<div id="container">
-					<div id="calc" class="calc">
-						<div id="top">
-							<div id="win-tool">
-								<!--<span>计算器</span>-->
-								<a id="history"  href="#" title="历史记录"><i id="h" class="iconfont history"></i></a>
-							</div>
-							<div id="result">
-								<div id="express">
+							<div id="calc" class="calc">
+								<div id="top">
+									<div id="win-tool">
+										<a id="history"  href="#" title="历史记录"><i id="h" class="iconfont history"></i></a>
+									</div>
+									<div id="result">
+										<div id="express">
+											
+										</div>
+										<div id="res">
+											0
+										</div>
+									</div>
+								</div>
+								
+								<div id="bottom">
+									<div class="row">
+										<span id="reset" data-number = "C">清空</span>
+										<span id="remove" data-number = "←">退格</span>
+										<span  data-number = "%">%</span>
+										<span class="tool chu" data-number = "/">/</span>
+									</div>
+									<div class="row">
+										<span  data-number = "7">7</span>
+										<span  data-number = "8">8</span>
+										<span  data-number = "9">9</span>
+										<span class="tool cheng" data-number = "*">*</span>
+									</div>
+									<div class="row">
+										<span  data-number = "4">4</span>
+										<span  data-number = "5">5</span>
+										<span  data-number = "6">6</span>
+										<span class="tool jiang" data-number = "-">-</span>
+									</div>
 									
+									<div class="row">
+										<span  data-number = "1">1</span>
+										<span  data-number = "2">2</span>
+										<span  data-number = "3">3</span>
+										<span class="tool add" data-number = "+">+</span>
+									</div>
+									<div class="row">
+										<span class="zero" data-number = "0">0</span>
+										<span class="dian" data-number = ".">.</span>
+										<span id="equals" class="tool eq" data-number = "=">=</span>
+									</div>
 								</div>
-								<div id="res">
-									0
+								
+								<div id="historyBox">
+									<div class="con">
+										<ul></ul>
+									</div>
+									<div class="remove">
+										<a href="javascript:;" title="清空历史记录">
+											<i class="iconfont del"></i>
+										</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						
-						<div id="bottom">
-							<div class="row">
-								<span id="reset" data-number = "C">清空</span>
-								<span id="remove" data-number = "←">退格</span>
-								<span  data-number = "%">%</span>
-								<span class="tool chu" data-number = "/">/</span>
-							</div>
-							<div class="row">
-								<span  data-number = "7">7</span>
-								<span  data-number = "8">8</span>
-								<span  data-number = "9">9</span>
-								<span class="tool cheng" data-number = "*">*</span>
-							</div>
-							<div class="row">
-								<span  data-number = "4">4</span>
-								<span  data-number = "5">5</span>
-								<span  data-number = "6">6</span>
-								<span class="tool jiang" data-number = "-">-</span>
-							</div>
-							
-							<div class="row">
-								<span  data-number = "1">1</span>
-								<span  data-number = "2">2</span>
-								<span  data-number = "3">3</span>
-								<span class="tool add" data-number = "+">+</span>
-							</div>
-							<div class="row">
-								<span class="zero" data-number = "0">0</span>
-								<span class="dian" data-number = ".">.</span>
-								<span id="equals" class="tool eq" data-number = "=">=</span>
-							</div>
-						</div>
-						
-						<div id="historyBox">
-							<div class="con">
-								<ul></ul>
-							</div>
-							<div class="remove">
-								<a href="javascript:;" title="清空历史记录">
-									<i class="iconfont del"></i>
-								</a>
-							</div>
-						</div>
-					</div>
 				</div>
 			</c-sidebar>
 			<c-sidebar id="menuSidebar" class="show-on-ready" modalOpacity="0" size="300px">
@@ -281,7 +281,7 @@
 							<ul c-repeat="menu in menus" class="level-2 small-block-grid-2" >
 								<li c-repeat="menuItem in menu.menus">
 									<div c-onclick="openLink(menuItem)">
-										<img src="resource/base/images/file.png" />
+										<img src="/base/images/file.png" />
 										<div c-bind="menuItem.label"></div>
 									</div>
 								</li>
@@ -296,7 +296,7 @@
 					<div class="box">
 						<div class="ui segment text-center basic inverted basic-info">
 							<div class="avatar">
-								<img class="ui image tiny avatar centered" src="resource/base/images/avatars/alex.png" />
+								<img class="ui image tiny avatar centered" src="/base/images/avatars/alex.png" />
 							</div>
 							<div class="name" c-bind="user.name"></div>
 						</div>
@@ -313,16 +313,16 @@
 			</c-sidebar>
 			
 		</div>	
-	<script src="resource/base/d3.js"></script>
-	<script src="resource/base/jquery/jquery-2.1.3.js"></script>
-	<script src="resource/base/jquery/jquery.cookie.js"></script>
-	<script src="resource/base/cola-ui/3rd.js"></script>
-	<script src="resource/base/cola-ui/semantic.js"></script>
-	<script src="resource/base/cola-ui/cola.js"></script>
-	<script src="resource/base/cola-ui/i18n/zh/cola.js"></script>
-	<script src="resource/udw.js"></script>
-	<script src="resource/chart.js"></script>
-	<script src="resource/calc.js"></script>
-	<script src="resource/calendar.js"></script>
+	<script src="/base/d3.js"></script>
+	<script src="/base/jquery/jquery-2.1.3.js"></script>
+	<script src="/base/jquery/jquery.cookie.js"></script>
+	<script src="/base/cola-ui/3rd.js"></script>
+	<script src="/base/cola-ui/semantic.js"></script>
+	<script src="/base/cola-ui/cola.js"></script>
+	<script src="/base/cola-ui/i18n/zh/cola.js"></script>
+	<script src="/udw.js"></script>
+	<script src="/chart.js"></script>
+	<script src="/calc.js"></script>
+	<script src="/calendar.js"></script>
 	</body>
 </html>
