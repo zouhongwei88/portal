@@ -69,7 +69,8 @@ cola(function (model) {
 			cola.widget("menuSidebar").toggle();
 		},
 		flushTask: function (self, arg) {
-			model.flush("tasks")
+			
+			model.flush("emails")
 		},
 		changeMenu: function (menu) {
 			var menus= menu.get("menus");
@@ -127,32 +128,36 @@ cola(function (model) {
 			url: "/menus"
 		}
 	});
+	
+	model.describe("emails",{
+		provider: {
+			url:"/emails",
+			pageSize: 5,
+		
+		}
+	});
 	model.describe("news", {
 		provider: {
 			url: "/data/menu.json"
+			
 		}
 	});
 
 
 	model.widgetConfig({
 		taskTable: {
-			bind: "item in tasks", showHeader: true,
+			bind: "item in emails", showHeader: true,
 			columns: [
-				{
-					caption: "标题", property: "businessTaskId",
-					template: "link", align: "center"
-				},
-				{caption: "密级", bind: "item.businessType"},
-				{caption: "发件人", property: "branchName"},
-			//	{caption: "紧急程度", template: "priority"},
-				// {caption: "客户等级", property: "businessLevel"},
-				{caption: "发件时间", bind: "formatDate(item.firstDate,'yy-MM-dd hh:mm')"}
-			//	{caption: "前次核保处理时间", bind: "formatDate(item.previousDate,'yy-MM-dd hh:mm')"},
-			//	{caption: "前次核保处理人", property: "previousAssignee"}
+				{caption: "标题", bind: "item.businessTaskId",
+				 template: "link", align: "center"},
+				{caption: "密级", bind: "item.emergence"},
+				{caption: "发件人", bind: "item.branchName"},
+			//	{caption: "发件时间", bind: "formatDate(item.sendTime,'yyyy-MM-dd')"},
+				{caption: "接收时间", bind: "formatDate(item.receiveTime,'yyyy-MM-dd')"}		
 			]
 		}
 	})
-
+	
 	$("#userStatus").popup({
 		hoverable: true,
 		on: 'hover', position: 'bottom center',
